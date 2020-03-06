@@ -223,6 +223,19 @@ define Device/glinet_gl-b1300
 endef
 TARGET_DEVICES += glinet_gl-b1300
 
+define Device/mobipromo_cm520-79f
+	$(call Device/FitzImage)
+	$(call Device/UbiFit)
+	DEVICE_TITLE := MobiPromo CM520-79F
+	DEVICE_VENDOR := MobiPromo
+	DEVICE_MODEL := CM520-79F
+	DEVICE_DTS := qcom-ipq4019-cm520-79f
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	DEVICE_PACKAGES := ipq-wifi-mobipromo_cm520-79f kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += mobipromo_cm520-79f
+
 define Device/linksys_ea6350v3
 	# The Linksys EA6350v3 has a uboot bootloader that does not
 	# support either booting lzma kernel images nor booting UBI
@@ -418,4 +431,6 @@ define Device/zyxel_wre6606
 endef
 TARGET_DEVICES += zyxel_wre6606
 
+
 $(eval $(call BuildImage))
+

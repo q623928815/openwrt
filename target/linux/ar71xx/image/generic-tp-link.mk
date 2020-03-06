@@ -540,3 +540,14 @@ define Device/tl-wr942n-v1
   SUPPORTED_DEVICES := tl-wr942n-v1
 endef
 TARGET_DEVICES += tl-wr942n-v1
+
+define Device/tl-wr740n-v5z
+  $(Device/tplink-16mlzma)
+  DEVICE_TITLE := TP-LINK TL-WR740N/ND v5z
+  BOARDNAME := TL-WR741ND-v4
+  DEVICE_PROFILE := TLWR740
+  TPLINK_HWID := 0x07400005
+  CONSOLE := ttyATH0,115200
+endef
+TARGET_DEVICES += tl-wr740n-v5z
+

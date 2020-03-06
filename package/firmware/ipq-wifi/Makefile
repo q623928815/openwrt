@@ -32,6 +32,7 @@ ALLWIFIBOARDS:= \
 	engenius_eap1300 \
 	engenius_ens620ext \
 	linksys_ea6350v3 \
+	mobipromo_cm520-79f \
 	linksys_ea8300 \
 	qxwlan_e2600ac
 
@@ -104,6 +105,7 @@ $(eval $(call generate-ipq-wifi-package,avm_fritzrepeater-3000,AVM FRITZ!Repeate
 $(eval $(call generate-ipq-wifi-package,engenius_eap1300,EnGenius EAP1300))
 $(eval $(call generate-ipq-wifi-package,engenius_ens620ext,EnGenius ENS620EXT))
 $(eval $(call generate-ipq-wifi-package,linksys_ea6350v3,Linksys EA6350v3))
+$(eval $(call generate-ipq-wifi-package,mobipromo_cm520-79f,board-mobipromo_cm520-79f.qca4019,MobiPromo CM520-79F))
 $(eval $(call generate-ipq-wifi-package,linksys_ea8300,Linksys EA8300))
 $(eval $(call generate-ipq-wifi-package,qxwlan_e2600ac,Qxwlan E2600AC))
 

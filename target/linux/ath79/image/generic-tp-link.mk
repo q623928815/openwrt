@@ -382,3 +382,11 @@ define Device/tplink_tl-wr2543-v1
   SUPPORTED_DEVICES += tl-wr2543n
 endef
 TARGET_DEVICES += tplink_tl-wr2543-v1
+
+define Device/tplink_tl-wr740n-v5z
+  $(Device/tplink-16mlzma)
+  ATH_SOC := ar9331
+  DEVICE_TITLE := TP-Link TL-WR740N v5z
+  TPLINK_HWID := 0x07400005
+endef
+TARGET_DEVICES += tplink_tl-wr740n-v5z
