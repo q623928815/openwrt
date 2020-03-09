@@ -12,6 +12,10 @@ ipq40xx_setup_interfaces()
 	local board="$1"
 
 	case "$board" in
+	mobipromo,cm520-79f)
+		ucidef_add_switch "switch0" \
+			"0t@eth0" "3:lan:2" "4:lan:1" "5:wan"
+		;;
 	p2w,r619ac|\
 	p2w,r619ac-128m)
 		ucidef_add_switch "switch0" \
@@ -56,7 +60,6 @@ ipq40xx_setup_interfaces()
 	compex,wpj428)
 		ucidef_set_interface_lan "eth0 eth1"
 		;;
-	mobipromo,cm520-79f |\
 	glinet,gl-b1300)
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 		ucidef_add_switch "switch0" \
